@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenDisplay.ViewModels
 {
-    internal class KitchenMainViewModel
+    public class KitchenMainViewModel
     {
     }
 }

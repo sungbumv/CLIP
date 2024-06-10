@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KitchenDisplay.Utils
+namespace KitchenDisplay.ViewModels.Common
 {
-    public class Print
+    public class CommonViewModel : INotifyPropertyChanged
     {
     }
 }

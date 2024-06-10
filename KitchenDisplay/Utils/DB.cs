@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenDisplay.Utils
 {
-    internal class DB
+    public class DB
     {
     }
 }

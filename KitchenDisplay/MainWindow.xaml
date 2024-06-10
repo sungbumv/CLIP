@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KitchenDisplay"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" 
+        Height="720" 
+        Width="1280"
+        >
     <Grid>
-
+        <ContentControl x:Name="mainContentControl"/>
     </Grid>
 </Window>

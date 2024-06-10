@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace KitchenDisplay.Models
 {
-    public class KitchenInfoModel
+    public class UserModel
     {
+        public string? UserId { get; set; }
+        public string? Password { get; set; }
     }
 }

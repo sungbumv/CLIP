@@ -7,6 +7,29 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Username:" Margin="10" VerticalAlignment="Center" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="10" VerticalAlignment="Center"
+                 Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Password:" Margin="10" VerticalAlignment="Center" />
+        <PasswordBox Grid.Row="1" Grid.Column="1" Margin="10" VerticalAlignment="Center"
+                     Password="{Binding Password, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="10" VerticalAlignment="Center" Foreground="Red"
+                   Text="{Binding StatusMessage}" />
+
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Login" Margin="10" HorizontalAlignment="Right" Width="75"
+                Command="{Binding LoginCommand}" />
     </Grid>
 </UserControl>
