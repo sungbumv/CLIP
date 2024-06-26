@@ -17,14 +17,12 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
         <Label Grid.Row="0" Grid.Column="0" Content="Username:" Margin="10" VerticalAlignment="Center" />
         <TextBox Grid.Row="0" Grid.Column="1" Margin="10" VerticalAlignment="Center"
-                 Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
-
+                 Text="{Binding UserId, UpdateSourceTrigger=PropertyChanged}" />
         <Label Grid.Row="1" Grid.Column="0" Content="Password:" Margin="10" VerticalAlignment="Center" />
         <PasswordBox Grid.Row="1" Grid.Column="1" Margin="10" VerticalAlignment="Center"
-                     Password="{Binding Password, UpdateSourceTrigger=PropertyChanged}" />
+                     Password="{Binding UserPassword, UpdateSourceTrigger=PropertyChanged}" />
 
         <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="10" VerticalAlignment="Center" Foreground="Red"
                    Text="{Binding StatusMessage}" />

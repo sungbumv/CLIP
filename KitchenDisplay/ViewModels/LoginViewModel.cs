@@ -1,16 +1,10 @@
-﻿using KitchenDisplay.ViewModels.Common;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KitchenDisplay.ViewModels.Command;
+using KitchenDisplay.ViewModels.Common;
 using System.Windows.Input;
 
 namespace KitchenDisplay.ViewModels
 {
-    public class LoginViewModel : CommonViewModel
+    public class LoginViewModel : BaseViewModel
     {
         private string userid;
         private string password;
@@ -22,17 +16,17 @@ namespace KitchenDisplay.ViewModels
             set
             {
                 userid = value;
-                OnPropertyChanged();
+                OnPropertyChanged("UserId");
             }
         }
 
-        public string Password
+        public string UserPassword
         {
             get => password;
             set
             {
                 password = value;
-                OnPropertyChanged();
+                OnPropertyChanged("UserPassword");
             }
         }
 
@@ -42,7 +36,7 @@ namespace KitchenDisplay.ViewModels
             set
             {
                 statusMsg = value;
-                OnPropertyChanged();
+                OnPropertyChanged("StatusMsg");
             }
         }
 
@@ -55,31 +49,24 @@ namespace KitchenDisplay.ViewModels
 
         private void Login(object parameter)
         {
-            if (AuthenticateUser(Username, Password))
+            if (AuthenticateUser(UserId, UserPassword))
             {
-                StatusMessage = "Login successful!";
+                statusMsg = "Login successful!";
             }
             else
             {
-                StatusMessage = "Invalid username or password.";
+                statusMsg = "Invalid username or password.";
             }
         }
 
         private bool CanLogin(object parameter)
         {
-            return !string.IsNullOrEmpty(UserId) && !string.IsNullOrEmpty(Password);
+            return !string.IsNullOrEmpty(UserId) && !string.IsNullOrEmpty(UserPassword);
         }
 
         private bool AuthenticateUser(string userid, string password)
         {
             return userid == "admin" && password == "password";
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

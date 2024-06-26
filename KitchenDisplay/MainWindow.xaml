@@ -10,6 +10,6 @@
         Width="1280"
         >
     <Grid>
-        <ContentControl x:Name="mainContentControl"/>
+        <ContentControl Content="{Binding SelectedViewModel}"/>
     </Grid>
 </Window>
