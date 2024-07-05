@@ -1,4 +1,5 @@
-﻿using KitchenDisplay.ViewModels.Common;
+﻿using KitchenDisplay.ViewModels.Command;
+using KitchenDisplay.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,13 +56,13 @@ namespace KitchenDisplay.ViewModels
 
         private void Login(object parameter)
         {
-            if (AuthenticateUser(Username, Password))
+            if (AuthenticateUser(userid, Password))
             {
-                StatusMessage = "Login successful!";
+                statusMsg = "Login successful!";
             }
             else
             {
-                StatusMessage = "Invalid username or password.";
+                statusMsg = "Invalid username or password.";
             }
         }
 

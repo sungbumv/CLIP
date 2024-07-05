@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KitchenDisplay.ViewModels.Common
 {
-    public class CommonViewModel : INotifyPropertyChanged
+    public class CommonViewModel 
     {
     }
 }

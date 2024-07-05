@@ -23,10 +23,7 @@ namespace KitchenDisplay.ViewModels.Command
             return canExecute == null || canExecute(parameter);
         }
 
-        public void Execute(object parameter)
-        {
-            execute(parameter);
-        }
+        public void Execute(object parameter) => execute(parameter);
 
         public event EventHandler CanExecuteChanged
         {
