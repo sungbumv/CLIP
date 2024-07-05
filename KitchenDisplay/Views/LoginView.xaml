@@ -25,15 +25,16 @@
         <PasswordBox 
             Grid.Row="1" Grid.Column="1" 
             x:Name="InputPassword" 
-         HorizontalContentAlignment="Left"
-         VerticalContentAlignment="Center"
-         MinWidth="200"
-         Height="32" 
-         Width="300"
-         FontSize="20"
-         BorderThickness="0"
-         hp:PasswordHelper.Attach="True"  
-         hp:PasswordHelper.Password="{Binding Path=InputPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"/>
+            HorizontalContentAlignment="Left"
+            VerticalContentAlignment="Center"
+            MinWidth="200"
+            Height="32" 
+            Width="300"
+            FontSize="20"
+            BorderThickness="0"
+            hp:PasswordHelper.Attach="True"  
+            hp:PasswordHelper.Password="{Binding Path=InputPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True,NotifyOnValidationError=True}"
+            />
 
         <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="10" VerticalAlignment="Center" Foreground="Red"
                    Text="{Binding StatusMessage}" />
